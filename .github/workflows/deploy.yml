@@ -25,10 +25,10 @@ jobs:
 
       - name: Generate .env
         run: |
-          echo "R2_ACCOUNT_ID=${{ vars.R2_ACCOUNT_ID }}" >> .env
-          echo "R2_ACCESS_KEY=${{ vars.R2_ACCESS_KEY }}" >> .env
-          echo "R2_SECRET_KEY=${{ vars.R2_SECRET_KEY }}" >> .env
-          echo "R2_BUCKET_NAME=${{ vars.R2_BUCKET_NAME }}" >> .env
+          echo "ACCOUNT_ID=${{ vars.R2_ACCOUNT_ID }}" >> .env
+          echo "ACCESS_KEY=${{ vars.R2_ACCESS_KEY }}" >> .env
+          echo "SECRET_KEY=${{ vars.R2_SECRET_KEY }}" >> .env
+          echo "BUCKET_NAME=${{ vars.R2_BUCKET_NAME }}" >> .env
 
       - name: Upload via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
